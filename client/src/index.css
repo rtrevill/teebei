@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Sixtyfour&display=swap');
+/* TO BE DELETED
+Temporarily inserted this because Semantics was 
+using white color text on white background for Input fields */
+
+/* Override Semantic UI's default font-family */
+/* This affects semantic element using class .uisuch as header, menu, etc */
+/* This seems to be most elements except for Accordion, Card header, etc */
+
+/* Sans font family adopted from Open-Props typography: https://open-props.style/#typography */
+
+/* https://imagecolorpicker.com/en from logo image*/
+
+:root {
+	--primary-color: #1c2c3b;
+	--secondary-color: #dce1e3;
+}
+
+.ui {
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+		Noto Sans, sans-serif !important;
+}
+
+html,
+body {
+	height: auto !important;
+	min-height: 100vh;
+}
+
+body {
+	/* https://cssgradient.io/gradient-backgrounds/ as "070 Aqua Splash" */
+	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%) !important;
+	padding-top: 4.5em !important;
+}
+
+.ui.large.navbar.menu,
+.page-header-segment {
+	background-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* creates slightly transparent cards to capture background gradient */
+.ui.segment:not(.page-header-segment) {
+	background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* creates slightly transparent cards to capture background gradient */
+.ui.raised.card {
+	background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+h1,
+h2 {
+	color: var(--primary-color) !important;
+}
+
+/* Targets items in both menus */
+.menu .item:not(.logout-link) {
+	color: var(--primary-color) !important;
+}
+
+/* Semantic styling wasn't working for nav items */
+.menu .item.logout-link {
+	color: var(--secondary-color) !important;
+	background-color: var(--primary-color) !important;
+}
+.page-description {
+	color: var(--primary-color) !important;
+}
+
+/* overrides the colour of the button and text on landing page  */
+.toggle-user-form-button {
+	background-color: var(--primary-color) !important;
+	color: var(--secondary-color) !important;
+}
+
+/* inverts colours on hover */
+.toggle-user-form-button:hover {
+	background-color: var(--secondary-color) !important;
+	color: var(--primary-color) !important;
+}
+
+/* for page title on landing page */
+.landing-page-title {
+	font-size: 1.6em !important; /* Base font size for mobile */
+	color: var(--primary-color); /* Set the color */
+	text-shadow: 2px 3px 5px var(--secondary-color); /* Add a text shadow */
+	font-family: 'Sixtyfour', sans-serif !important;
+	/* FIND A FONT FOR LANDING PAGE TITLE */
+	/* font-family: 'Brush Script MT', cursive !important; */
+}
+
+/* When the viewport is 800px or less, decrease the font size */
+/* When the viewport is 428px or more, increase the font size */
+@media (min-width: 428px) {
+	.landing-page-title {
+		font-size: 1.8em !important;
+	}
+}
+
+/* When the viewport is 559px or more, increase the font size even more */
+@media (min-width: 559px) {
+	.landing-page-title {
+		font-size: 2.5em !important;
+	}
+}
+
+/* When the viewport is 801px or more, increase the font size even more */
+@media (min-width: 801px) {
+	.landing-page-title {
+		font-size: 3.5em !important;
+	}
+}
+
+/* For reduced padding with slimmer menu on the desktop view */
+@media (min-width: 991px) {
+	body {
+		padding-top: 4em !important;
+	}
+}
